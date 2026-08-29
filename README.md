@@ -150,7 +150,7 @@ Create a `.env` file inside the `backend` folder:
 
 ```env
 PORT=5000
-MONGODB_URI=mongodb+srv://yourusername:yourpassword@cluster.mongodb.net/connect-db
+MONGODB_URI=addyourmongodburi
 JWT_SECRET=your_secret_key_here
 CLIENT_URL=http://localhost:3000
 ```
