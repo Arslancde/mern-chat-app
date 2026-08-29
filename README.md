@@ -22,6 +22,44 @@ The app is fully responsive, works on both desktop and mobile, and comes with al
 
 ---
 
+## 📸 Screenshots
+
+### 🔐 Authentication Pages
+
+| Login Page | Register Page |
+|------------|---------------|
+| ![Login Page](screenshots/login.png) | ![Register Page](screenshots/register.png) |
+
+---
+
+### 💬 Chat Interface
+
+| Chat Window | User List |
+|-------------|-----------|
+| ![Chat Interface](screenshots/chat.png) | ![User List](screenshots/userlist.png) |
+
+| Another Chat View |
+|-------------------|
+| ![Chat View 2](screenshots/chat2.png) |
+
+---
+
+### 🎵 Audio Messaging
+
+| Recording Audio | Audio Preview |
+|-----------------|---------------|
+| ![Recording Audio](screenshots/audio1.png) | ![Audio Preview](screenshots/audio2.png) |
+
+---
+
+### 🎨 Theme Switcher
+
+| Multiple Themes |
+|-----------------|
+| ![Themes](screenshots/themes.png) |
+
+---
+
 ## ✨ What You Can Do
 
 Here's everything you can do with Connect:
@@ -201,6 +239,15 @@ Connect/
 │   │   ├── App.css
 │   │   └── index.js
 │   └── package.json
+├── screenshots/
+│   ├── audio1.png
+│   ├── audio2.png
+│   ├── chat.png
+│   ├── chat2.png
+│   ├── login.png
+│   ├── register.png
+│   ├── themes.png
+│   └── userlist.png
 ├── .gitignore
 └── README.md
 ```
