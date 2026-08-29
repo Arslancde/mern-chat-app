@@ -1,0 +1,120 @@
+### Test Server
+GET http://localhost:5000/api/test
+
+###
+
+### Register User
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "email": "test@example.com",
+    "password": "123456"
+}
+
+###
+
+### Register Second User
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "john_doe",
+    "email": "john@example.com",
+    "password": "123456"
+}
+
+###
+
+### 1 Login User
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "test@example.com",
+    "password": "123456"
+}
+
+###
+
+### 2 Login User
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "test@example.com",
+    "password": "123456"
+}
+
+###
+
+### Get All Users (Protected)
+GET http://localhost:5000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTkxMzFhYjBiOTVlMzdkMDE3YmE5ODkiLCJpYXQiOjE3ODc5MDAzMzEsImV4cCI6MTc5MDQ5MjMzMX0.PI6mazfvC9jsi_j_b8HHPuna68CY8MX818XII9UustA
+
+###
+
+### Get User by ID (Protected)
+GET http://localhost:5000/api/users/USER_ID_HERE
+Authorization: Bearer YOUR_TOKEN_HERE
+
+###
+
+### Update Profile (Protected)
+PUT http://localhost:5000/api/users/profile
+Authorization: Bearer YOUR_TOKEN_HERE
+Content-Type: application/json
+
+{
+    "username": "updated_testuser",
+    "avatar": "https://example.com/avatar.jpg"
+}
+
+###
+
+### Logout (Protected)
+POST http://localhost:5000/api/auth/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTkxMzFhYjBiOTVlMzdkMDE3YmE5ODkiLCJpYXQiOjE3ODc5MDAzMzEsImV4cCI6MTc5MDQ5MjMzMX0.PI6mazfvC9jsi_j_b8HHPuna68CY8MX818XII9UustA
+
+
+
+
+
+### ============================================
+### MESSAGING API TESTS
+### ============================================
+
+### Send a Message (Replace TOKEN and RECEIVER_ID)
+POST http://localhost:5000/api/messages
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTkxMzEyNTBiOTVlMzdkMDE3YmE5ODIiLCJpYXQiOjE3ODc5MDc2NTcsImV4cCI6MTc5MDQ5OTY1N30.xTRskSoCBsW6Ag480DPy24DBDh6QusnMEs8ECjaTYd8
+Content-Type: application/json
+
+{
+    "receiverId": "6a9131250b95e37d017ba982",
+    "content": "Hello! This is a test message."
+}
+
+###
+
+### Get Conversation with Specific User (Replace TOKEN and USER_ID)
+GET http://localhost:5000/api/messages/REPLACE_WITH_USER_ID
+Authorization: Bearer YOUR_TOKEN_HERE
+
+###
+
+### Get All Conversations for Current User
+GET http://localhost:5000/api/messages/conversations
+Authorization: Bearer YOUR_TOKEN_HERE
+
+###
+
+### Mark Messages as Read (Replace TOKEN and USER_ID)
+PUT http://localhost:5000/api/messages/read/REPLACE_WITH_USER_ID
+Authorization: Bearer YOUR_TOKEN_HERE
+
+###
+
+### Delete a Message (Replace TOKEN and MESSAGE_ID)
+DELETE http://localhost:5000/api/messages/REPLACE_WITH_MESSAGE_ID
+Authorization: Bearer YOUR_TOKEN_HERE
